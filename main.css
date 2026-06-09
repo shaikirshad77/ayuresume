@@ -1,0 +1,315 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 140, 255);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0 3px;
+}
+
+hr {
+  color: rgb(185, 185, 185);
+  margin: 1px 0;
+  border: 1px solid;
+  margin: 0 0 5px 0;
+}
+
+/* Common Styles for all */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 0 5px 0;
+}
+
+.heading {
+  margin: 1px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.list-item-h,
+.list-item-v {
+  padding: 0 0 0 10px;
+}
+
+/* Personal Info */
+
+.p-name {
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+
+.heading-info div {
+  margin: 2px 0;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.md-3 {
+  margin: 3px 0;
+}
+
+.p-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.p-info {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 600;
+  padding: 0;
+}
+
+.p-info a,
+.p-info p {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 1px;
+}
+
+.container-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.horizontal {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-item-h {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  text-align: center;
+  margin: 0;
+}
+
+.list-item-h ul {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: auto 0;
+}
+
+.list-item-h p {
+  font-weight: bold;
+}
+
+/* Skills */
+
+.skills-row p {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.skills-row ul {
+  flex: 3;
+}
+
+/* Experience & Projects */
+
+.sep {
+  margin: 0 1px;
+}
+
+.list-item-v {
+  display: flex;
+  flex-direction: column;
+  margin: 3px 0;
+}
+
+.list-item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.list-item-header span {
+  color: grey;
+  font-weight: 500;
+}
+
+.light {
+  font-weight: unset;
+  font-style: italic;
+}
+
+.list-item-v .list-item-description {
+  padding: 0 0 0 20px;
+}
+
+.list-item-description ul {
+  list-style-type: disc;
+}
+
+.skills-inline {
+  margin: 2px 0;
+  line-height: 1.15;
+  font-size: 12px;
+}
+
+.skills-inline strong {
+  font-weight: 600;
+}
+
+/* Kill browser-added spacing in print */
+@media print {
+  .summary-text {
+    line-height: 1.15; 
+    margin: 0;
+    padding: 0;
+  }
+
+  .summary-text strong {
+    font-weight: 600;
+  }
+}
+
+/* Space between summary and bullet points */
+.experience-summary {
+  margin-bottom: 6px;  
+}
+
+/* Keep summary compact */
+.summary-text {
+  margin: 0;
+  line-height: 1.18;
+}
+
+/* Tight bullets (no extra gap above first bullet) */
+.list-item-description ul {
+  margin-top: 0;
+}
+/* === Skills spacing fix (A4 perfect) === */
+
+.skills-row-inline {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 1.25;
+  margin: 1px 0;
+}
+
+.skills-label {
+  width: 190px;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.skills-text {
+  flex: 1;
+}
+
+/* Print tightening */
+@media print {
+  .skills-row-inline {
+    line-height: 1.2;
+    margin: 0;
+  }
+}
+.contact-line {
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 1px 0;
+}
+
+.contact-line a {
+  margin: 0 2px;
+}
+
+/* Remove extra spacing from header containers */
+.heading-info {
+  margin: 0;
+}
+
+.p-info {
+  padding: 0;
+}
+
+/* Reduce name spacing */
+.p-name {
+  margin-bottom: 2px;
+  line-height: 1.1;
+}
+
+/* Print-specific tightening */
+@media print {
+  .contact-line {
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .p-name {
+    margin-bottom: 1px;
+  }
+  .list-item-description li {
+  margin-bottom: 2px;
+  line-height: 1.25;
+}
+
+.list-item-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.summary-text {
+  line-height: 1.2;
+}
+
+.skills-label {
+  min-width: 140px;
+  font-weight: 700;
+}
+}
+
