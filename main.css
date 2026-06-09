@@ -71,7 +71,7 @@ hr {
 .center {
   text-align: center;
   justify-content: center;
-  margin: auto;
+  margin: 0;
 }
 
 .md-3 {
