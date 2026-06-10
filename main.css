@@ -193,6 +193,9 @@ hr {
 .skills-inline strong {
   font-weight: 600;
 }
+.client-summary {
+  margin-bottom: 6px;
+}
 
 /* Kill browser-added spacing in print */
 @media print {
@@ -320,8 +323,6 @@ strong {
 .list-item-header + .summary-text {
   margin-bottom: 4px;
 }
-  .client-summary {
-  margin-bottom: 6px;
-}
+  
 }
 
