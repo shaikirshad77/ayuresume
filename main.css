@@ -178,7 +178,9 @@ hr {
 .list-item-v .list-item-description {
   padding: 0 0 0 20px;
 }
-
+.list-item-description {
+    margin-top: 6px;
+}
 .list-item-description ul {
   list-style-type: disc;
   padding-left: 18px;
