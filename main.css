@@ -320,5 +320,8 @@ strong {
 .list-item-header + .summary-text {
   margin-bottom: 4px;
 }
+  .client-summary {
+  margin-bottom: 6px;
+}
 }
 
