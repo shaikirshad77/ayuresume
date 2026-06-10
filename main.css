@@ -311,5 +311,13 @@ strong {
   min-width: 140px;
   font-weight: 700;
 }
+  .summary-text {
+  margin: 0;
+  line-height: 1.18;
+}
+
+.list-item-header + .summary-text {
+  margin-bottom: 4px;
+}
 }
 
