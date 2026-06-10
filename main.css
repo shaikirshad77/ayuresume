@@ -181,6 +181,7 @@ hr {
 
 .list-item-description ul {
   list-style-type: disc;
+  padding-left: 18px;
 }
 
 .skills-inline {
