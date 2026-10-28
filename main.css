@@ -1,330 +1,301 @@
+
+/* =========================
+   Base Styles
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 10.5px;
+  line-height: 1.3;
+  color: #202124;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 8mm 10mm;
+  background: #fff;
 }
 
 a {
+  color: #0078d4;
   text-decoration: none;
-  color: rgb(0, 140, 255);
 }
 
 h1,
 h2,
-h3 {
-  margin: 0;
-}
-
-div,
-p {
-  margin: 0;
-  padding: 0;
-}
-
+h3,
+p,
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
 }
 
-li {
-  padding: 0 3px;
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 0;
 }
 
-hr {
-  color: rgb(185, 185, 185);
-  margin: 1px 0;
-  border: 1px solid;
-  margin: 0 0 5px 0;
-}
+/* =========================
+   Header
+   ========================= */
 
-/* Common Styles for all */
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 0 0 5px 0;
-}
-
-.heading {
-  margin: 1px;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.list-item-h,
-.list-item-v {
-  padding: 0 0 0 10px;
-}
-
-/* Personal Info */
-
-.p-name {
-  font-size: 1.1rem;
-  font-weight: 550;
-}
-
-.heading-info div {
-  margin: 2px 0;
-}
-
-.center {
+.resume-header {
   text-align: center;
-  justify-content: center;
-  margin: 0;
+  margin-bottom: 12px;
 }
 
-.md-3 {
-  margin: 3px 0;
+.resume-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
 }
 
-.p-link {
+.profile-summary {
+  max-width: 680px;
+  margin: 0 auto 5px;
+  line-height: 1.3;
+}
+
+.contact-line,
+.social-links {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-}
-
-.p-info {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
   font-weight: 600;
-  padding: 0;
+  line-height: 1.3;
 }
 
-.p-info a,
-.p-info p {
+/* =========================
+   Sections
+   ========================= */
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #b9b9b9;
+}
+
+/* =========================
+   Skills
+   ========================= */
+
+.skills-row {
+  display: grid;
+  grid-template-columns: 125px minmax(0, 1fr);
+  column-gap: 8px;
+  margin-bottom: 2px;
+  line-height: 1.25;
+}
+
+.skills-row strong {
+  font-weight: 700;
+}
+
+/* =========================
+   Experience & Projects
+   ========================= */
+
+.entry {
+  margin-bottom: 8px;
+}
+
+.entry-header,
+.entry-subheader {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin: 0 1px;
-}
-
-.container-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.horizontal {
-  flex-direction: column;
-  justify-content: center;
-}
-
-.list-item-h {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  text-align: center;
-  margin: 0;
-}
-
-.list-item-h ul {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: auto 0;
-}
-
-.list-item-h p {
-  font-weight: bold;
-}
-
-/* Skills */
-
-.skills-row p {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  text-align: start;
-}
-
-.skills-row ul {
-  flex: 3;
-}
-
-/* Experience & Projects */
-
-.sep {
-  margin: 0 1px;
-}
-
-.list-item-v {
-  display: flex;
-  flex-direction: column;
-  margin: 3px 0;
-}
-
-.list-item-header {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  font-weight: bold;
-  margin: 0 0 5px 0;
+  align-items: baseline;
+  column-gap: 12px;
 }
 
-.list-item-header span {
-  color: grey;
-  font-weight: 500;
+.entry-header {
+  margin-bottom: 2px;
 }
 
-.light {
-  font-weight: unset;
+.entry-header h3 {
+  font-size: 11.5px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.location,
+.project-tech {
+  text-align: right;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.entry-subheader {
+  margin-bottom: 4px;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.entry-subheader > :last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.summary {
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.bullets {
+  list-style-type: disc;
+  padding-left: 17px;
+  margin: 3px 0 0;
+}
+
+.bullets li {
+  padding-left: 1px;
+  margin-bottom: 3px;
+  line-height: 1.28;
+}
+
+.bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.education-score {
+  margin-top: 2px;
   font-style: italic;
 }
 
-.list-item-v .list-item-description {
-  padding: 0 0 0 20px;
-}
-.list-item-description {
-    margin-top: 6px;
-}
-.list-item-description ul {
-  list-style-type: disc;
-  padding-left: 18px;
+/* =========================
+   Responsive Screen Layout
+   ========================= */
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  .entry-header,
+  .entry-subheader {
+    flex-wrap: wrap;
+    gap: 2px 8px;
+  }
+
+  .location,
+  .project-tech {
+    text-align: left;
+  }
+
+  .skills-row {
+    grid-template-columns: 115px minmax(0, 1fr);
+  }
 }
 
-.skills-inline {
-  margin: 2px 0;
-  line-height: 1.15;
-  font-size: 12px;
+/* =========================
+   PDF / Print Layout
+   ========================= */
+
+@page {
+  size: A4;
+  margin: 9mm;
 }
 
-.skills-inline strong {
-  font-weight: 600;
-}
-.client-summary {
-  margin-bottom: 6px;
-}
-
-/* Kill browser-added spacing in print */
 @media print {
-  .summary-text {
-    line-height: 1.15; 
+  body {
+    width: 100%;
+    max-width: none;
     margin: 0;
     padding: 0;
+    font-size: 9.5px;
+    line-height: 1.22;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
-  .summary-text strong {
-    font-weight: 600;
-  }
-}
-
-/* Space between summary and bullet points */
-.experience-summary {
-  margin-bottom: 6px;  
-}
-
-/* Keep summary compact */
-.summary-text {
-  margin: 0;
-  line-height: 1.18;
-}
-
-/* Tight bullets (no extra gap above first bullet) */
-.list-item-description ul {
-  margin-top: 0;
-}
-/* === Skills spacing fix (A4 perfect) === */
-
-.skills-row-inline {
-  display: flex;
-  align-items: flex-start;
-  font-size: 12px;
-  line-height: 1.25;
-  margin: 1px 0;
-}
-
-.skills-label {
-  width: 190px;
-  flex-shrink: 0;
-  font-weight: 700;
-}
-
-.skills-text {
-  flex: 1;
-}
-
-/* Print tightening */
-@media print {
-  .skills-row-inline {
-    line-height: 1.2;
-    margin: 0;
-  }
-}
-.contact-line {
-  text-align: center;
-  font-weight: 600;
-  line-height: 1.2;
-  margin: 1px 0;
-}
-
-.contact-line a {
-  margin: 0 2px;
-}
-
-/* Remove extra spacing from header containers */
-.heading-info {
-  margin: 0;
-}
-
-.p-info {
-  padding: 0;
-}
-
-/* Reduce name spacing */
-.p-name {
-  margin-bottom: 2px;
-  line-height: 1.1;
-}
-
-/* Print-specific tightening */
-@media print {
-  .contact-line {
-    line-height: 1.1;
-    margin: 0;
+  .resume-header {
+    margin-bottom: 9px;
   }
 
-  .p-name {
+  .resume-header h1 {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .profile-summary {
+    margin-bottom: 4px;
+  }
+
+  .section {
+    margin-bottom: 7px;
+  }
+
+  .section-title {
+    font-size: 12.5px;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+  }
+
+  .skills-row {
+    grid-template-columns: 115px minmax(0, 1fr);
+    column-gap: 6px;
     margin-bottom: 1px;
+    line-height: 1.2;
   }
-  .list-item-description li {
-  margin-bottom: 2px;
-  line-height: 1.25;
-}
 
-.list-item-header h3 {
-  font-size: 15px;
-  font-weight: 700;
-}
+  .entry {
+    margin-bottom: 6px;
+  }
 
-strong {
-  font-weight: 700;
-}
+  .entry-header h3 {
+    font-size: 10.5px;
+  }
 
-.heading {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
+  .location,
+  .project-tech {
+    font-size: 9px;
+  }
 
-.summary-text {
-  line-height: 1.2;
-}
+  .entry-subheader {
+    margin-bottom: 3px;
+  }
 
-.skills-label {
-  min-width: 140px;
-  font-weight: 700;
-}
-  .summary-text {
-  margin: 0;
-  line-height: 1.18;
-}
+  .summary {
+    margin-bottom: 3px;
+    line-height: 1.22;
+  }
 
-.list-item-header + .summary-text {
-  margin-bottom: 4px;
-}
-  
-}
+  .bullets {
+    padding-left: 15px;
+    margin-top: 2px;
+  }
 
+  .bullets li {
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
+
+  .section-title,
+  .entry-header,
+  .entry-subheader {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  a {
+    color: #0078d4;
+    text-decoration: none;
+  }
+}
