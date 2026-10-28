@@ -1,360 +1,223 @@
 
-/* =========================
-   GLOBAL STYLES
-   ========================= */
-
 * {
-  box-sizing: border-box;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  line-height: 1.3;
-  color: #222;
-  background: #fff;
-  max-width: 210mm;
-  margin: 0 auto;
-  padding: 8mm 10mm;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.35;
 }
 
-a {
-  color: #008cff;
-  text-decoration: none;
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 22px 35px;
+    background: #ffffff;
 }
 
-h1,
-h2,
-h3,
-p,
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
+.heading {
+    text-align: center;
+    margin-bottom: 12px;
 }
 
-/* =========================
-   HEADER
-   ========================= */
-
-.resume-header {
-  text-align: center;
-  margin-bottom: 12px;
+.p-name {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 0 5px;
+    color: #111111;
 }
 
-.resume-header h1 {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 5px;
+.contact-line {
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 2px 0;
+}
+
+.contact-line a {
+    color: #222222;
+    text-decoration: none;
 }
 
 .profile-summary {
-  max-width: 650px;
-  margin: 0 auto 6px;
-  line-height: 1.35;
-  text-align: center;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.3;
+    margin: 5px 0 7px;
+    padding: 0;
 }
-
-.contact-line,
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 3px 0;
-  line-height: 1.3;
-}
-
-.contact-line,
-.social-links {
-  font-weight: 600;
-}
-
-/* =========================
-   SECTION HEADINGS
-   ========================= */
 
 .section {
-  width: 100%;
-  margin-bottom: 11px;
+    margin-top: 11px;
 }
 
-.section-title {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.2;
-  border-bottom: 1px solid #b9b9b9;
-  padding-bottom: 4px;
-  margin-bottom: 7px;
+.list-item-h {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 3px;
+    margin: 0 0 6px;
 }
 
-/* =========================
-   SKILLS
-   ========================= */
-
-.skills-row {
-  display: grid;
-  grid-template-columns: 135px minmax(0, 1fr);
-  align-items: start;
-  column-gap: 8px;
-  margin-bottom: 3px;
-  line-height: 1.3;
+.list-item-v {
+    margin: 0 0 7px;
 }
 
-.skills-row strong {
-  font-weight: 700;
+.list-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 2px;
 }
 
-/* =========================
-   EXPERIENCE AND PROJECTS
-   ========================= */
-
-.entry {
-  width: 100%;
-  margin-bottom: 10px;
+.list-item-title {
+    font-weight: bold;
+    font-size: 12px;
 }
 
-.entry-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-  margin-bottom: 4px;
+.list-item-date {
+    font-size: 11px;
+    white-space: nowrap;
+    text-align: right;
 }
 
-.entry-header h3 {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.25;
+.light {
+    color: #555555;
+    font-weight: normal;
 }
 
-.location,
-.project-tech {
-  flex-shrink: 0;
-  text-align: right;
-  font-size: 10.5px;
-  font-weight: 600;
+.list-item-description {
+    margin: 2px 0 4px;
+    font-size: 11.5px;
 }
 
-.project-tech {
-  max-width: 55%;
+.summary-text {
+    margin: 3px 0 5px;
+    font-size: 11.5px;
+    line-height: 1.35;
 }
 
-.entry-subheader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-  font-style: italic;
-  line-height: 1.3;
-  margin-bottom: 5px;
+ul {
+    margin: 3px 0 7px;
+    padding-left: 18px;
 }
 
-.entry-subheader > :last-child {
-  text-align: right;
-  white-space: nowrap;
+li {
+    margin: 0 0 3px;
+    padding-left: 1px;
 }
 
-.summary {
-  line-height: 1.35;
-  margin-bottom: 5px;
+p {
+    margin-top: 2px;
+    margin-bottom: 4px;
 }
 
-.summary strong {
-  font-weight: 700;
+a {
+    color: #222222;
+    text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
-/* Bullet points */
-
-.bullets {
-  display: block;
-  list-style-type: disc;
-  padding-left: 19px;
-  margin: 4px 0 0;
+strong,
+b {
+    font-weight: bold;
 }
-
-.bullets li {
-  display: list-item;
-  padding-left: 2px;
-  margin-bottom: 4px;
-  line-height: 1.3;
-}
-
-.bullets li:last-child {
-  margin-bottom: 0;
-}
-
-/* =========================
-   EDUCATION
-   ========================= */
-
-.education-score {
-  margin-top: 3px;
-  font-style: italic;
-}
-
-/* =========================
-   RESPONSIVE SCREEN LAYOUT
-   ========================= */
-
-@media screen and (max-width: 600px) {
-  body {
-    padding: 16px;
-  }
-
-  .entry-header,
-  .entry-subheader {
-    flex-wrap: wrap;
-    gap: 3px 8px;
-  }
-
-  .location,
-  .project-tech {
-    flex-shrink: 1;
-    max-width: 100%;
-    text-align: left;
-  }
-
-  .skills-row {
-    grid-template-columns: 115px minmax(0, 1fr);
-  }
-}
-
-/* =========================
-   A4 PRINT / PDF
-   ========================= */
 
 @page {
-  size: A4;
-  margin: 10mm;
+    size: A4;
+    margin: 10mm;
 }
 
 @media print {
-  html,
-  body {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    font-size: 10.5px;
-    line-height: 1.3;
-    color: #222;
-    background: #fff;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
+    body {
+        background: #ffffff;
+        font-size: 11px;
+        line-height: 1.25;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 
-  /* Header */
+    .container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
 
-  .resume-header {
-    margin-bottom: 13px;
-  }
+    .heading {
+        margin-bottom: 8px;
+    }
 
-  .resume-header h1 {
-    font-size: 19px;
-    margin-bottom: 4px;
-  }
+    .p-name {
+        font-size: 23px;
+        margin-bottom: 3px;
+    }
 
-  .profile-summary {
-    margin-bottom: 4px;
-    line-height: 1.3;
-  }
+    .contact-line {
+        font-size: 10px;
+        line-height: 1.35;
+        margin: 1px 0;
+    }
 
-  .contact-line,
-  .social-links {
-    margin: 2px 0;
-    line-height: 1.2;
-  }
+    .profile-summary {
+        font-size: 11px;
+        line-height: 1.2;
+        margin: 2px 0 5px;
+    }
 
-  /* Sections */
+    .section {
+        margin-top: 8px;
+    }
 
-  .section {
-    margin-bottom: 10px;
-  }
+    .list-item-h {
+        font-size: 13px;
+        padding-bottom: 2px;
+        margin-bottom: 4px;
+    }
 
-  .section-title {
-    font-size: 13px;
-    padding-bottom: 4px;
-    margin-bottom: 6px;
-  }
+    .list-item-v {
+        margin-bottom: 5px;
+    }
 
-  /* Skills */
+    .list-item-title {
+        font-size: 11px;
+    }
 
-  .skills-row {
-    grid-template-columns: 125px minmax(0, 1fr);
-    column-gap: 7px;
-    margin-bottom: 3px;
-    line-height: 1.3;
-  }
+    .list-item-date {
+        font-size: 10px;
+    }
 
-  /* Experience and projects */
+    .list-item-description,
+    .summary-text {
+        font-size: 10.5px;
+        line-height: 1.25;
+    }
 
-  .entry {
-    margin-bottom: 9px;
-  }
+    ul {
+        margin: 2px 0 5px;
+        padding-left: 16px;
+    }
 
-  .entry-header {
-    gap: 10px;
-    margin-bottom: 4px;
-  }
+    li {
+        margin-bottom: 2px;
+    }
 
-  .entry-header h3 {
-    font-size: 11px;
-  }
+    a {
+        color: #222222;
+        text-decoration: none;
+    }
 
-  .location,
-  .project-tech {
-    font-size: 9.5px;
-  }
-
-  .entry-subheader {
-    margin-bottom: 5px;
-    line-height: 1.3;
-  }
-
-  .summary {
-    line-height: 1.3;
-    margin-bottom: 4px;
-  }
-
-  /* Ensure bullet points print correctly */
-
-  .bullets {
-    display: block;
-    list-style-type: disc;
-    padding-left: 17px;
-    margin-top: 3px;
-  }
-
-  .bullets li {
-    display: list-item;
-    padding-left: 1px;
-    margin-bottom: 3px;
-    line-height: 1.27;
-  }
-
-  .bullets li:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Avoid splitting small headings from their content */
-
-  .section-title,
-  .entry-header,
-  .entry-subheader {
-    break-after: avoid;
-    page-break-after: avoid;
-  }
-
-  a {
-    color: #008cff;
-    text-decoration: none;
-  }
+    .section,
+    .list-item-v,
+    li {
+        break-inside: avoid;
+    }
 }
