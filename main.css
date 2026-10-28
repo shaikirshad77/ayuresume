@@ -339,4 +339,18 @@ hr {
   .list-item-header + .summary-text {
     margin-bottom: 4px;
   }
+  
+/* Add space below the profile headline in the resume header */
+.heading-info .profile-summary,
+.heading-info .summary-text {
+  margin-bottom: 8px !important;
+}
+
+/* Keep the spacing when printing */
+@media print {
+  .heading-info .profile-summary,
+  .heading-info .summary-text {
+    margin-bottom: 8px !important;
+  }
+}
 }
