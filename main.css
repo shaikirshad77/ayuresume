@@ -1,8 +1,3 @@
-
-/* =========================
-   Base Styles
-   ========================= */
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -37,13 +32,12 @@ li {
 
 hr {
   color: rgb(185, 185, 185);
-  margin: 0 0 5px 0;
+  margin: 1px 0;
   border: 1px solid;
+  margin: 0 0 5px 0;
 }
 
-/* =========================
-   Common Layout
-   ========================= */
+/* Common Styles for all */
 
 .container {
   display: flex;
@@ -54,8 +48,8 @@ hr {
 
 .heading {
   margin: 1px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .list-item-h,
@@ -63,30 +57,11 @@ hr {
   padding: 0 0 0 10px;
 }
 
-.container-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.horizontal {
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* =========================
-   Personal Information
-   ========================= */
+/* Personal Info */
 
 .p-name {
   font-size: 1.1rem;
   font-weight: 550;
-  margin-bottom: 2px;
-  line-height: 1.1;
-}
-
-.heading-info {
-  margin: 0;
 }
 
 .heading-info div {
@@ -107,9 +82,6 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
 }
 
 .p-info {
@@ -117,44 +89,28 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   font-weight: 600;
   padding: 0;
-  flex-wrap: wrap;
 }
 
 .p-info a,
 .p-info p {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   flex-direction: row;
-  margin: 0 2px;
+  margin: 0 1px;
 }
 
-.contact-line {
-  text-align: center;
-  font-weight: 600;
-  line-height: 1.2;
-  margin: 1px 0;
+.container-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.contact-line a {
-  margin: 0 2px;
+.horizontal {
+  flex-direction: column;
+  justify-content: center;
 }
-
-/* New headline below the name/contact details */
-.profile-summary {
-  text-align: center;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1.25;
-  margin: 3px 0 6px;
-  padding: 0;
-}
-
-/* =========================
-   Section Headings
-   ========================= */
 
 .list-item-h {
   display: flex;
@@ -176,9 +132,7 @@ hr {
   font-weight: bold;
 }
 
-/* =========================
-   Skills
-   ========================= */
+/* Skills */
 
 .skills-row p {
   flex: 1;
@@ -191,39 +145,7 @@ hr {
   flex: 3;
 }
 
-.skills-inline {
-  margin: 2px 0;
-  line-height: 1.15;
-  font-size: 12px;
-}
-
-.skills-inline strong {
-  font-weight: 600;
-}
-
-.skills-row-inline {
-  display: flex;
-  align-items: flex-start;
-  font-size: 12px;
-  line-height: 1.25;
-  margin: 1px 0;
-}
-
-.skills-label {
-  width: 190px;
-  min-width: 140px;
-  flex-shrink: 0;
-  font-weight: 700;
-}
-
-.skills-text {
-  flex: 1;
-  min-width: 0;
-}
-
-/* =========================
-   Experience and Projects
-   ========================= */
+/* Experience & Projects */
 
 .sep {
   margin: 0 1px;
@@ -239,8 +161,6 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
   font-weight: bold;
   margin: 0 0 5px 0;
 }
@@ -250,144 +170,160 @@ hr {
   font-weight: 500;
 }
 
-.list-item-header h3 {
-  font-size: 15px;
-  font-weight: 700;
-}
-
 .light {
   font-weight: unset;
   font-style: italic;
 }
 
-.list-item-description {
-  margin-top: 6px;
-}
-
 .list-item-v .list-item-description {
   padding: 0 0 0 20px;
 }
-
+.list-item-description {
+    margin-top: 6px;
+}
 .list-item-description ul {
   list-style-type: disc;
   padding-left: 18px;
-  margin-top: 0;
 }
 
-.list-item-description li {
-  margin-bottom: 2px;
-  line-height: 1.25;
+.skills-inline {
+  margin: 2px 0;
+  line-height: 1.15;
+  font-size: 12px;
 }
 
+.skills-inline strong {
+  font-weight: 600;
+}
 .client-summary {
   margin-bottom: 6px;
 }
 
+/* Kill browser-added spacing in print */
+@media print {
+  .summary-text {
+    line-height: 1.15; 
+    margin: 0;
+    padding: 0;
+  }
+
+  .summary-text strong {
+    font-weight: 600;
+  }
+}
+
+/* Space between summary and bullet points */
+.experience-summary {
+  margin-bottom: 6px;  
+}
+
+/* Keep summary compact */
 .summary-text {
   margin: 0;
   line-height: 1.18;
 }
 
-.summary-text strong {
-  font-weight: 600;
+/* Tight bullets (no extra gap above first bullet) */
+.list-item-description ul {
+  margin-top: 0;
+}
+/* === Skills spacing fix (A4 perfect) === */
+
+.skills-row-inline {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 1.25;
+  margin: 1px 0;
 }
 
-.experience-summary {
-  margin-bottom: 6px;
+.skills-label {
+  width: 190px;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.skills-text {
+  flex: 1;
+}
+
+/* Print tightening */
+@media print {
+  .skills-row-inline {
+    line-height: 1.2;
+    margin: 0;
+  }
+}
+.contact-line {
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 1px 0;
+}
+
+.contact-line a {
+  margin: 0 2px;
+}
+
+/* Remove extra spacing from header containers */
+.heading-info {
+  margin: 0;
+}
+
+.p-info {
+  padding: 0;
+}
+
+/* Reduce name spacing */
+.p-name {
+  margin-bottom: 2px;
+  line-height: 1.1;
+}
+
+/* Print-specific tightening */
+@media print {
+  .contact-line {
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .p-name {
+    margin-bottom: 1px;
+  }
+  .list-item-description li {
+  margin-bottom: 2px;
+  line-height: 1.25;
+}
+
+.list-item-header h3 {
+  font-size: 15px;
+  font-weight: 700;
 }
 
 strong {
   font-weight: 700;
 }
 
-/* =========================
-   Print / PDF Formatting
-   ========================= */
-
-@page {
-  size: A4;
-  margin: 10mm;
+.heading {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
-@media print {
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
+.summary-text {
+  line-height: 1.2;
+}
 
-  .container {
-    margin: 0 0 4px 0;
-  }
-
-  .heading {
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-
-  .p-name {
-    margin-bottom: 1px;
-    line-height: 1.1;
-  }
-
-  .p-link {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .p-info {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-
-  .contact-line {
-    line-height: 1.1;
-    margin: 0;
-  }
-
-  .profile-summary {
-    font-size: 11px;
-    line-height: 1.2;
-    margin: 2px 0 4px;
-  }
-
+.skills-label {
+  min-width: 140px;
+  font-weight: 700;
+}
   .summary-text {
-    line-height: 1.15;
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  line-height: 1.18;
+}
 
-  .list-item-description {
-    margin-top: 4px;
-  }
-
-  .list-item-description ul {
-    margin-top: 0;
-  }
-
-  .list-item-description li {
-    margin-bottom: 2px;
-    line-height: 1.2;
-  }
-
-  .skills-row-inline {
-    line-height: 1.2;
-    margin: 0;
-  }
-
-  .skills-label {
-    min-width: 140px;
-    font-weight: 700;
-  }
-
-  .list-item-header + .summary-text {
-    margin-bottom: 4px;
-  }
+.list-item-header + .summary-text {
+  margin-bottom: 4px;
+}
+  
 }
