@@ -1,223 +1,393 @@
 
-* {
-    box-sizing: border-box;
-}
+/* =========================
+   Base Styles
+   ========================= */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #222222;
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    line-height: 1.35;
-}
-
-.container {
-    width: 100%;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 22px 35px;
-    background: #ffffff;
-}
-
-.heading {
-    text-align: center;
-    margin-bottom: 12px;
-}
-
-.p-name {
-    font-size: 25px;
-    font-weight: bold;
-    margin: 0 0 5px;
-    color: #111111;
-}
-
-.contact-line {
-    text-align: center;
-    font-size: 11px;
-    line-height: 1.5;
-    margin: 2px 0;
-}
-
-.contact-line a {
-    color: #222222;
-    text-decoration: none;
-}
-
-.profile-summary {
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.3;
-    margin: 5px 0 7px;
-    padding: 0;
-}
-
-.section {
-    margin-top: 11px;
-}
-
-.list-item-h {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 1px solid #333333;
-    padding-bottom: 3px;
-    margin: 0 0 6px;
-}
-
-.list-item-v {
-    margin: 0 0 7px;
-}
-
-.list-item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 2px;
-}
-
-.list-item-title {
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.list-item-date {
-    font-size: 11px;
-    white-space: nowrap;
-    text-align: right;
-}
-
-.light {
-    color: #555555;
-    font-weight: normal;
-}
-
-.list-item-description {
-    margin: 2px 0 4px;
-    font-size: 11.5px;
-}
-
-.summary-text {
-    margin: 3px 0 5px;
-    font-size: 11.5px;
-    line-height: 1.35;
-}
-
-ul {
-    margin: 3px 0 7px;
-    padding-left: 18px;
-}
-
-li {
-    margin: 0 0 3px;
-    padding-left: 1px;
-}
-
-p {
-    margin-top: 2px;
-    margin-bottom: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 
 a {
-    color: #222222;
-    text-decoration: none;
-    overflow-wrap: anywhere;
+  text-decoration: none;
+  color: rgb(0, 140, 255);
 }
 
-strong,
-b {
-    font-weight: bold;
+h1,
+h2,
+h3 {
+  margin: 0;
 }
+
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0 3px;
+}
+
+hr {
+  color: rgb(185, 185, 185);
+  margin: 0 0 5px 0;
+  border: 1px solid;
+}
+
+/* =========================
+   Common Layout
+   ========================= */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 0 5px 0;
+}
+
+.heading {
+  margin: 1px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.list-item-h,
+.list-item-v {
+  padding: 0 0 0 10px;
+}
+
+.container-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.horizontal {
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =========================
+   Personal Information
+   ========================= */
+
+.p-name {
+  font-size: 1.1rem;
+  font-weight: 550;
+  margin-bottom: 2px;
+  line-height: 1.1;
+}
+
+.heading-info {
+  margin: 0;
+}
+
+.heading-info div {
+  margin: 2px 0;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.md-3 {
+  margin: 3px 0;
+}
+
+.p-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.p-info {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.p-info a,
+.p-info p {
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 2px;
+}
+
+.contact-line {
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 1px 0;
+}
+
+.contact-line a {
+  margin: 0 2px;
+}
+
+/* New headline below the name/contact details */
+.profile-summary {
+  text-align: center;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.25;
+  margin: 3px 0 6px;
+  padding: 0;
+}
+
+/* =========================
+   Section Headings
+   ========================= */
+
+.list-item-h {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  text-align: center;
+  margin: 0;
+}
+
+.list-item-h ul {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: auto 0;
+}
+
+.list-item-h p {
+  font-weight: bold;
+}
+
+/* =========================
+   Skills
+   ========================= */
+
+.skills-row p {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.skills-row ul {
+  flex: 3;
+}
+
+.skills-inline {
+  margin: 2px 0;
+  line-height: 1.15;
+  font-size: 12px;
+}
+
+.skills-inline strong {
+  font-weight: 600;
+}
+
+.skills-row-inline {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 1.25;
+  margin: 1px 0;
+}
+
+.skills-label {
+  width: 190px;
+  min-width: 140px;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.skills-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* =========================
+   Experience and Projects
+   ========================= */
+
+.sep {
+  margin: 0 1px;
+}
+
+.list-item-v {
+  display: flex;
+  flex-direction: column;
+  margin: 3px 0;
+}
+
+.list-item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.list-item-header span {
+  color: grey;
+  font-weight: 500;
+}
+
+.list-item-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.light {
+  font-weight: unset;
+  font-style: italic;
+}
+
+.list-item-description {
+  margin-top: 6px;
+}
+
+.list-item-v .list-item-description {
+  padding: 0 0 0 20px;
+}
+
+.list-item-description ul {
+  list-style-type: disc;
+  padding-left: 18px;
+  margin-top: 0;
+}
+
+.list-item-description li {
+  margin-bottom: 2px;
+  line-height: 1.25;
+}
+
+.client-summary {
+  margin-bottom: 6px;
+}
+
+.summary-text {
+  margin: 0;
+  line-height: 1.18;
+}
+
+.summary-text strong {
+  font-weight: 600;
+}
+
+.experience-summary {
+  margin-bottom: 6px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* =========================
+   Print / PDF Formatting
+   ========================= */
 
 @page {
-    size: A4;
-    margin: 10mm;
+  size: A4;
+  margin: 10mm;
 }
 
 @media print {
-    body {
-        background: #ffffff;
-        font-size: 11px;
-        line-height: 1.25;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
-    .container {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding: 0;
-    }
+  .container {
+    margin: 0 0 4px 0;
+  }
 
-    .heading {
-        margin-bottom: 8px;
-    }
+  .heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
 
-    .p-name {
-        font-size: 23px;
-        margin-bottom: 3px;
-    }
+  .p-name {
+    margin-bottom: 1px;
+    line-height: 1.1;
+  }
 
-    .contact-line {
-        font-size: 10px;
-        line-height: 1.35;
-        margin: 1px 0;
-    }
+  .p-link {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 
-    .profile-summary {
-        font-size: 11px;
-        line-height: 1.2;
-        margin: 2px 0 5px;
-    }
+  .p-info {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+  }
 
-    .section {
-        margin-top: 8px;
-    }
+  .contact-line {
+    line-height: 1.1;
+    margin: 0;
+  }
 
-    .list-item-h {
-        font-size: 13px;
-        padding-bottom: 2px;
-        margin-bottom: 4px;
-    }
+  .profile-summary {
+    font-size: 11px;
+    line-height: 1.2;
+    margin: 2px 0 4px;
+  }
 
-    .list-item-v {
-        margin-bottom: 5px;
-    }
+  .summary-text {
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+  }
 
-    .list-item-title {
-        font-size: 11px;
-    }
+  .list-item-description {
+    margin-top: 4px;
+  }
 
-    .list-item-date {
-        font-size: 10px;
-    }
+  .list-item-description ul {
+    margin-top: 0;
+  }
 
-    .list-item-description,
-    .summary-text {
-        font-size: 10.5px;
-        line-height: 1.25;
-    }
+  .list-item-description li {
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
 
-    ul {
-        margin: 2px 0 5px;
-        padding-left: 16px;
-    }
+  .skills-row-inline {
+    line-height: 1.2;
+    margin: 0;
+  }
 
-    li {
-        margin-bottom: 2px;
-    }
+  .skills-label {
+    min-width: 140px;
+    font-weight: 700;
+  }
 
-    a {
-        color: #222222;
-        text-decoration: none;
-    }
-
-    .section,
-    .list-item-v,
-    li {
-        break-inside: avoid;
-    }
+  .list-item-header + .summary-text {
+    margin-bottom: 4px;
+  }
 }
