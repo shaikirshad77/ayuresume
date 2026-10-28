@@ -33,13 +33,6 @@ h3,
 p,
 ul {
   margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-p,
-ul {
   margin-bottom: 0;
 }
 
@@ -77,10 +70,7 @@ ul {
   line-height: 1.3;
 }
 
-.contact-line {
-  font-weight: 600;
-}
-
+.contact-line,
 .social-links {
   font-weight: 600;
 }
@@ -253,16 +243,18 @@ ul {
     max-width: none;
     margin: 0;
     padding: 0;
-    font-size: 10px;
-    line-height: 1.25;
+    font-size: 10.5px;
+    line-height: 1.3;
     color: #222;
     background: #fff;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
+  /* Header */
+
   .resume-header {
-    margin-bottom: 9px;
+    margin-bottom: 13px;
   }
 
   .resume-header h1 {
@@ -272,7 +264,7 @@ ul {
 
   .profile-summary {
     margin-bottom: 4px;
-    line-height: 1.25;
+    line-height: 1.3;
   }
 
   .contact-line,
@@ -281,30 +273,36 @@ ul {
     line-height: 1.2;
   }
 
+  /* Sections */
+
   .section {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .section-title {
     font-size: 13px;
-    padding-bottom: 3px;
-    margin-bottom: 5px;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
   }
+
+  /* Skills */
 
   .skills-row {
     grid-template-columns: 125px minmax(0, 1fr);
     column-gap: 7px;
-    margin-bottom: 2px;
-    line-height: 1.22;
+    margin-bottom: 3px;
+    line-height: 1.3;
   }
 
+  /* Experience and projects */
+
   .entry {
-    margin-bottom: 7px;
+    margin-bottom: 9px;
   }
 
   .entry-header {
     gap: 10px;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
   .entry-header h3 {
@@ -317,16 +315,19 @@ ul {
   }
 
   .entry-subheader {
-    margin-bottom: 4px;
-    line-height: 1.22;
+    margin-bottom: 5px;
+    line-height: 1.3;
   }
 
   .summary {
-    line-height: 1.25;
+    line-height: 1.3;
     margin-bottom: 4px;
   }
 
+  /* Ensure bullet points print correctly */
+
   .bullets {
+    display: block;
     list-style-type: disc;
     padding-left: 17px;
     margin-top: 3px;
@@ -335,13 +336,15 @@ ul {
   .bullets li {
     display: list-item;
     padding-left: 1px;
-    margin-bottom: 2px;
-    line-height: 1.23;
+    margin-bottom: 3px;
+    line-height: 1.27;
   }
 
   .bullets li:last-child {
     margin-bottom: 0;
   }
+
+  /* Avoid splitting small headings from their content */
 
   .section-title,
   .entry-header,
