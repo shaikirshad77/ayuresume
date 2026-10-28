@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -178,9 +179,11 @@ hr {
 .list-item-v .list-item-description {
   padding: 0 0 0 20px;
 }
+
 .list-item-description {
-    margin-top: 6px;
+  margin-top: 6px;
 }
+
 .list-item-description ul {
   list-style-type: disc;
   padding-left: 18px;
@@ -195,39 +198,37 @@ hr {
 .skills-inline strong {
   font-weight: 600;
 }
+
 .client-summary {
   margin-bottom: 6px;
 }
 
-/* Kill browser-added spacing in print */
-@media print {
-  .summary-text {
-    line-height: 1.15; 
-    margin: 0;
-    padding: 0;
-  }
+/* Summary styling */
 
-  .summary-text strong {
-    font-weight: 600;
-  }
-}
-
-/* Space between summary and bullet points */
 .experience-summary {
-  margin-bottom: 6px;  
+  margin-bottom: 6px;
 }
 
-/* Keep summary compact */
 .summary-text {
   margin: 0;
   line-height: 1.18;
 }
 
-/* Tight bullets (no extra gap above first bullet) */
+.summary-text strong {
+  font-weight: 600;
+}
+
+/* Add breathing room below the profile headline */
+.profile-summary {
+  margin-bottom: 8px;
+}
+
+/* Tight bullets */
 .list-item-description ul {
   margin-top: 0;
 }
-/* === Skills spacing fix (A4 perfect) === */
+
+/* Skills spacing */
 
 .skills-row-inline {
   display: flex;
@@ -247,13 +248,8 @@ hr {
   flex: 1;
 }
 
-/* Print tightening */
-@media print {
-  .skills-row-inline {
-    line-height: 1.2;
-    margin: 0;
-  }
-}
+/* Contact details */
+
 .contact-line {
   text-align: center;
   font-weight: 600;
@@ -265,7 +261,8 @@ hr {
   margin: 0 2px;
 }
 
-/* Remove extra spacing from header containers */
+/* Header spacing */
+
 .heading-info {
   margin: 0;
 }
@@ -274,14 +271,29 @@ hr {
   padding: 0;
 }
 
-/* Reduce name spacing */
 .p-name {
   margin-bottom: 2px;
   line-height: 1.1;
 }
 
-/* Print-specific tightening */
+/* Print-specific styling */
+
 @media print {
+  .summary-text {
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+  }
+
+  .summary-text strong {
+    font-weight: 600;
+  }
+
+  .skills-row-inline {
+    line-height: 1.2;
+    margin: 0;
+  }
+
   .contact-line {
     line-height: 1.1;
     margin: 0;
@@ -290,40 +302,41 @@ hr {
   .p-name {
     margin-bottom: 1px;
   }
+
+  .profile-summary {
+    margin-bottom: 8px;
+  }
+
   .list-item-description li {
-  margin-bottom: 2px;
-  line-height: 1.25;
-}
+    margin-bottom: 2px;
+    line-height: 1.25;
+  }
 
-.list-item-header h3 {
-  font-size: 15px;
-  font-weight: 700;
-}
+  .list-item-header h3 {
+    font-size: 15px;
+    font-weight: 700;
+  }
 
-strong {
-  font-weight: 700;
-}
+  strong {
+    font-weight: 700;
+  }
 
-.heading {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
+  .heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
 
-.summary-text {
-  line-height: 1.2;
-}
-
-.skills-label {
-  min-width: 140px;
-  font-weight: 700;
-}
   .summary-text {
-  margin: 0;
-  line-height: 1.18;
-}
+    line-height: 1.18;
+    margin: 0;
+  }
 
-.list-item-header + .summary-text {
-  margin-bottom: 4px;
-}
-  
+  .skills-label {
+    min-width: 140px;
+    font-weight: 700;
+  }
+
+  .list-item-header + .summary-text {
+    margin-bottom: 4px;
+  }
 }
